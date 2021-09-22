@@ -1,0 +1,18 @@
+.setting-main {
+  text-align: initial;
+}
+
+.setting-main p{
+  color:#65BEFF;
+  font-size: 16px;
+  line-height: 60px;
+}
+
+.setting-main li{
+  font-size: 18px;
+  line-height:44px;
+}
+
+.setting-main .red-font {
+  color: #FF6969;
+}

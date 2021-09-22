@@ -1,0 +1,18 @@
+{
+  "works": [
+      {
+          "work": {
+              "img": "https://asdadsads.s3.ap-northeast-2.amazonaws.com/1.jpg",
+              "name": "이름",
+              "author": "작가",
+              "like": 123
+          },
+          "work": {
+              "img": "https://asdadsads.s3.ap-northeast-2.amazonaws.com/1.jpg",
+              "name": "이름",
+              "author": "작가",
+              "like": 123
+          }
+      }
+  ]
+}
