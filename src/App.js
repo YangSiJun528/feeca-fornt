@@ -4,6 +4,7 @@ import UnderBar from './components/UnderBar.js';
 import TopBar from './components/TopBar.js';
 import Home from './components/Home.js';
 import Setting from './components/Setting.js';
+import WorkPage from './components/WorkPage.js';
 import { Link, Route, Switch } from 'react-router-dom'
 import { useHistory, useParams } from 'react-router-dom';
 import {CSSTransition} from 'react-transition-group';
@@ -34,7 +35,7 @@ function App() {
           </Route>
           <Route path="/work/:user_id">
             <TopBar topBarBackSpace={true} setTopBarBackSpace={setTopBarBackSpace} topBarText={''} setTopBarText={setTopBarText} topBarIcon={true} setTopBarIcon={setTopBarIcon}/>
-            <p>유저화면</p>
+            <WorkPage/>
           </Route>
           <Route path="/work/:user_id/:work_id">
             <TopBar topBarBackSpace={true} setTopBarBackSpace={setTopBarBackSpace} topBarText={''} setTopBarText={setTopBarText} topBarIcon={true} setTopBarIcon={setTopBarIcon}/>

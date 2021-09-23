@@ -41,7 +41,7 @@ function Home(props) {
       <div className="grid">
         {
           works.map((work, i)=>{
-            return <Work key={i} i={i} url={work.img}/>
+            return <Work key={i} i={i} url={work.img} id={work.id}/>
             // return <Work key={i} i={i} url={"logo192.png"}/>
           })
         }
@@ -53,8 +53,9 @@ function Home(props) {
 }
 
 function Work(props) {
+  let history = useHistory();
   return (
-    <div className="work">
+    <div className="work" onClick={()=>{ history.push(`/work/${props.id}`)}}>
       <div>
         <img src={props.url} className="work-img"></img>
       </div>
