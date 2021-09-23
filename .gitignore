@@ -9,7 +9,8 @@
 /coverage
 
 # production
-/build
+# 일단 임시로 
+#/build
 
 # misc
 .DS_Store
