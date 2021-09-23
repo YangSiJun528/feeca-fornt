@@ -12,25 +12,27 @@ function Login(props) {
     let user = {}
     user.id = document.querySelector("#id").value
     user.password = document.querySelector("#password").value
-  //   axios.post(
-  //     '/login', 
-  //     {...user}
-  //     )
-  //     .then(function (response) {
-  //       if (response.result == 'true'){
-  //         alert("로그인 되었습니다"); history.push(`/home`)
-  //       } else if (response.result == 'false') {
-  //         alert(response.reason); history.push(`/login`)
-  //       }
-  //     }) 
-  //     .catch(error => {alert("에러가 발생했습니다. 다시 시도해주세요."); history.push(`/home`)});
+    axios.post(
+      '/login', 
+      {...user}
+      )
+      .then(function (response) {
+        if (response.result == 'true'){
+          props.setLogin(true);
+          props.setUser(response.user);
+          alert("로그인 되었습니다"); history.push(`/home`)
+        } else if (response.result == 'false') {
+          alert(response.reason); history.push(`/login`)
+        }
+      }) 
+      .catch(error => {alert("에러가 발생했습니다. 다시 시도해주세요."); history.push(`/home`)});
   }
   return (
     <div className="container">
       <form>
         <p>
           <strong>아이디</strong>
-          <input type="text" name="name" id="name" placeholder="ID를 입력하세요"/>
+          <input type="text" name="id" id="id" placeholder="ID를 입력하세요"/>
         </p>
         <p>
           <strong>비밀번호</strong>
@@ -40,6 +42,9 @@ function Login(props) {
           <input type="button" value="제출" onClick={handleClick}/>
         </p>
       </form>
+      <p>
+        <input type="button" value="회원가입" onClick={()=>{ history.push('/register') }}/>
+      </p>
     </div>
   )
 }
