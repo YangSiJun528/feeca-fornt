@@ -15,7 +15,7 @@ function Home(props) {
   // 서버에서 아이템을 가지고 오는 함수
   const getItems = useCallback(async () => {
     setLoading(true)
-    await axios.get('http://10.120.74.70:5000/')
+    await axios.get('http://3.34.192.110/')
     .then((result)=>{
       console.log(result)
       setWork([...works, ...result.data.works])

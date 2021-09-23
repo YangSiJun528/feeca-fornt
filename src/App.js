@@ -5,6 +5,9 @@ import TopBar from './components/TopBar.js';
 import Home from './components/Home.js';
 import Setting from './components/Setting.js';
 import WorkPage from './components/WorkPage.js';
+import UserPage from './components/UserPage.js';
+import Login from './components/Login.js';
+import Register from './components/Register.js';
 import { Link, Route, Switch } from 'react-router-dom'
 import { useHistory, useParams } from 'react-router-dom';
 import {CSSTransition} from 'react-transition-group';
@@ -28,6 +31,14 @@ function App() {
           <p>웹툰화면</p>
         </Route>
         <Route path="/">
+          <Route path="/login">
+            <TopBar topBarBackSpace={true} setTopBarBackSpace={setTopBarBackSpace} topBarText={topBarText} setTopBarText={setTopBarText} topBarIcon={false} setTopBarIcon={setTopBarIcon}/> 
+            <Login/>
+          </Route>
+          <Route path="/register">
+            <TopBar topBarBackSpace={true} setTopBarBackSpace={setTopBarBackSpace} topBarText={topBarText} setTopBarText={setTopBarText} topBarIcon={false} setTopBarIcon={setTopBarIcon}/> 
+            <Register/>
+          </Route>
           <UnderBar underBarSwitch={underBarSwitch} setUnderBarSwitch={setUnderBarSwitch} />
           <Route path="/setting">
             <TopBar topBarBackSpace={true} setTopBarBackSpace={setTopBarBackSpace} topBarText={topBarText} setTopBarText={setTopBarText} topBarIcon={false} setTopBarIcon={setTopBarIcon}/> 
