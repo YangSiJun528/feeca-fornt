@@ -41,8 +41,7 @@ function Home(props) {
       <div className="grid">
         {
           works.map((work, i)=>{
-            return <Work key={i} i={i} url={work.img} id={work.id}/>
-            // return <Work key={i} i={i} url={"logo192.png"}/>
+            return <Work key={i} i={i} url={work.img} id={work.id} name={work.name} author={work.author} />
           })
         }
         <div ref={ref} className="bottom">
@@ -59,11 +58,11 @@ function Work(props) {
       <div>
         <img src={props.url} className="work-img"></img>
       </div>
-      <p className="work-name">작품 이름</p>
-      <p className="work-author">@{props.i}</p>
+      <p className="work-name">{props.name}</p>
+      <p className="work-author">@{props.author}</p>
       <img src="icons/work_like.svg" className="work-like"></img>
     </div>
   )
 }
 
-export default Home;
+export { Home, Work };

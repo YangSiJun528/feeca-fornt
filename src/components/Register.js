@@ -26,7 +26,6 @@ function Register(props) {
       {...user}
       )
       .then(function (response) {
-        console.log("aa")
         console.log(response)
         if (response.data.result == true){
           alert("회원가입 되었습니다"); history.push(`/home`)

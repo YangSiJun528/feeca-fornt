@@ -2,7 +2,7 @@ import React, { useState,useEffect,useContext } from 'react';
 import './App.css';
 import UnderBar from './components/UnderBar.js';
 import TopBar from './components/TopBar.js';
-import Home from './components/Home.js';
+import { Home } from './components/Home.js';
 import Setting from './components/Setting.js';
 import WorkPage from './components/WorkPage.js';
 import UserPage from './components/UserPage.js';
@@ -41,17 +41,17 @@ function App() {
             <TopBar topBarBackSpace={true} setTopBarBackSpace={setTopBarBackSpace} topBarText={topBarText} setTopBarText={setTopBarText} topBarIcon={false} setTopBarIcon={setTopBarIcon}/> 
             <Setting setTopBarText={setTopBarText}/>
           </Route>
-          <Route path="/work/:user_id">
+          <Route path="/work/:work_id">
             <TopBar topBarBackSpace={true} setTopBarBackSpace={setTopBarBackSpace} topBarText={''} setTopBarText={setTopBarText} topBarIcon={true} setTopBarIcon={setTopBarIcon}/>
             <WorkPage/>
-          </Route>
-          <Route path="/work/:user_id/:work_id">
-            <TopBar topBarBackSpace={true} setTopBarBackSpace={setTopBarBackSpace} topBarText={''} setTopBarText={setTopBarText} topBarIcon={true} setTopBarIcon={setTopBarIcon}/>
-            <p>작품화면</p>
           </Route>
           <Route path="/home">
             <TopBar topBarBackSpace={false} setTopBarBackSpace={setTopBarBackSpace} topBarText={''} setTopBarText={setTopBarText} topBarIcon={true} setTopBarIcon={setTopBarIcon}/>
             <Home />
+          </Route>
+          <Route path="/user/:user_id/">
+            <TopBar topBarBackSpace={true} setTopBarBackSpace={setTopBarBackSpace} topBarText={''} setTopBarText={setTopBarText} topBarIcon={true} setTopBarIcon={setTopBarIcon}/>
+            <UserPage/>
           </Route>
         </Route>
         </>

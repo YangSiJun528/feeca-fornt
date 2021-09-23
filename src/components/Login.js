@@ -17,6 +17,7 @@ function Login(props) {
       {...user}
       )
       .then(function (response) {
+        console.log(response)
         if (response.data.result == true){
           props.setLogin(true);
           props.setUser(response.data.user);

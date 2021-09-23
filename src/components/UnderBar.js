@@ -15,7 +15,7 @@ function UnderBar(props) {
       <div onClick={handleProfileClick} className={"underBar-block "+(props.underBarSwitch === true ? "underBar-block-on" : "underBar-block-off")}></div>
       <ul className="underBar">
         <li><img onClick={()=>{ history.push('/home') }} className="nav_icon" src="icons/nav_home.svg" alt="홈"/></li>
-        <li className="nav_profile"><img onClick={handleProfileClick} className="nav_icon" src="icons/profile.svg" alt="프로필"/>
+        <li className="nav_profile"><img onClick={handleProfileClick} className="nav_icon" src="icons/profile.png" alt="프로필"/>
         
         </li>
         <li><img onClick={()=>{ history.push('/setting') }} className="nav_icon" src="icons/nav_setting.svg" alt="설정"/></li>
