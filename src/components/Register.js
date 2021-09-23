@@ -13,24 +13,28 @@ function Register(props) {
     user.id = document.querySelector("#id").value
     user.name = document.querySelector("#name").value
     user.password = document.querySelector("#password").value
+    user.email = document.querySelector("#email").value
     let checks = document.querySelectorAll(".gender")
     for (var i = 0; i < checks.length; i++) {
       if (checks[i].checked) {
         user.gender =  checks[i].value;
       }
   }
-  //   axios.post(
-  //     '/register', 
-  //     {...user}
-  //     )
-  //     .then(function (response) {
-  //       if (response.result == 'true'){
-  //         alert("회원가입 되었습니다"); history.push(`/home`)
-  //       } else if (response.result == 'false') {
-  //         alert(response.reason); history.push(`/register`)
-  //       }
-  //     }) 
-  //     .catch(error => {alert("에러가 발생했습니다. 다시 시도해주세요."); history.push(`/home`)});
+  console.log(user)
+    axios.post(
+      'http://3.34.192.110/register', 
+      {...user}
+      )
+      .then(function (response) {
+        console.log("aa")
+        console.log(response)
+        if (response.data.result == true){
+          alert("회원가입 되었습니다"); history.push(`/home`)
+        } else if (response.data.result == 'false') {
+          alert(response.data.reason); history.push(`/register`)
+        }
+      }) 
+      .catch(error => {alert("에러가 발생했습니다. 다시 시도해주세요."); history.push(`/home`)});
   }
   return (
     <div className="container">
@@ -38,6 +42,10 @@ function Register(props) {
         <p>
           <strong>닉네임</strong>
           <input type="text" name="name" id="name" placeholder="닉네임을 입력하세요"/>
+        </p>
+        <p>
+          <strong>이메일</strong>
+          <input type="text" name="email" id="email" placeholder="e-mail을 입력하세요"/>
         </p>
         <p>
           <strong>아이디</strong>

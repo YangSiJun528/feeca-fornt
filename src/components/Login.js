@@ -13,16 +13,16 @@ function Login(props) {
     user.id = document.querySelector("#id").value
     user.password = document.querySelector("#password").value
     axios.post(
-      '/login', 
+      'http://3.34.192.110/login', 
       {...user}
       )
       .then(function (response) {
-        if (response.result == 'true'){
+        if (response.data.result == true){
           props.setLogin(true);
-          props.setUser(response.user);
+          props.setUser(response.data.user);
           alert("로그인 되었습니다"); history.push(`/home`)
-        } else if (response.result == 'false') {
-          alert(response.reason); history.push(`/login`)
+        } else if (response.data.result == 'false') {
+          alert(response.data.reason); history.push(`/login`)
         }
       }) 
       .catch(error => {alert("에러가 발생했습니다. 다시 시도해주세요."); history.push(`/home`)});
