@@ -1,1 +1,5 @@
 @import "reset.css";
+
+.pro {
+  border-radius: 50%;
+}

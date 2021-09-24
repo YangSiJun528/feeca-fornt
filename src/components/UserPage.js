@@ -20,13 +20,21 @@ function UserPage(props) {
   return (
     <div className="container">
     {user != null && <>
-        <p>
-          <img src={user.profile_img}></img>
+      <p>
+          <img src={user.banner_img}></img>
         </p>
-        <p>{user.name}</p>
+        <p>
+          <img className="pro" src={user.profile_img}></img>
+        </p>
+        <p>이름: {user.name} & follower: {user.follower}</p>
+        <br></br>
+        <p>{user.intro}</p>
+        <br></br>
+        <br></br>
+        <p>{user.name}의 최근 작품</p>
         <div>
           {
-            user.illust.map((work, i)=>{
+            user.works.map((work, i)=>{
               return <Work key={i} i={i} url={work.img} id={work.id} name={work.name} author={work.author} />
             })
           }

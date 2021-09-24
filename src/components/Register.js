@@ -40,15 +40,15 @@ function Register(props) {
       <form>
         <p>
           <strong>닉네임</strong>
-          <input type="text" name="name" id="name" placeholder="닉네임을 입력하세요"/>
+          <input type="text" name="name" autocomplete="off" id="name" placeholder="닉네임을 입력하세요"/>
         </p>
         <p>
           <strong>이메일</strong>
-          <input type="text" name="email" id="email" placeholder="e-mail을 입력하세요"/>
+          <input type="text" name="email" autocomplete="off" id="email" placeholder="e-mail을 입력하세요"/>
         </p>
         <p>
           <strong>아이디</strong>
-          <input type="text" name="id" id="id" placeholder="ID를 입력하세요"/>
+          <input type="text" name="id" autocomplete="off" id="id" placeholder="ID를 입력하세요"/>
         </p>
         <p>
           <strong>비밀번호</strong>

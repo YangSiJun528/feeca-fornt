@@ -33,11 +33,11 @@ function Login(props) {
       <form>
         <p>
           <strong>아이디</strong>
-          <input type="text" name="id" id="id" placeholder="ID를 입력하세요"/>
+          <input type="text" name="id" autocomplete="off" id="id" placeholder="ID를 입력하세요"/>
         </p>
         <p>
           <strong>비밀번호</strong>
-          <input type="password" name="password" id="password" placeholder="Passwrod를 입력하세요"/>
+          <input type="password" autocomplete="off" name="password" id="password" placeholder="Passwrod를 입력하세요"/>
         </p>
         <p>
           <input type="button" value="제출" onClick={handleClick}/>

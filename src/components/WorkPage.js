@@ -32,7 +32,7 @@ function WorkPage(props) {
           </p>
         </div>
           <p>
-            {work.work.like}
+            likes: {work.work.like}
           </p>
           <p>
             {work.work.tag}
