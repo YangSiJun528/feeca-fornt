@@ -60,7 +60,7 @@ function Work(props) {
       </div>
       <p className="work-name">{props.name}</p>
       <p className="work-author">@{props.author}</p>
-      <img src="icons/work_like.svg" className="work-like"></img>
+      <img src="https://asdadsads.s3.ap-northeast-2.amazonaws.com/work_like.svg" className="work-like"></img>  asdasdasd
     </div>
   )
 }
